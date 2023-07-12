@@ -18,7 +18,7 @@ Follow the steps below to install the project:
 
 To run the project, follow the steps below:
 
-1. Run the command: `npm start`.
+1. Run the command: `npm run dev`.
 2. Open a web browser and go to: `http://localhost:3000`.
 
 ## Contributing
