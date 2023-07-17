@@ -11,7 +11,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Created the Project [MBU-2](https://memebattle.atlassian.net/browse/MBU-2)
 - Created Changelog.md [MBU-9](https://memebattle.atlassian.net/browse/MBU-9)
+<<<<<<< HEAD
 - Created PULL_REQUEST_TEMPLATE [MBU-6](https://memebattle.atlassian.net/browse/MBU-6) 
+=======
+- Folder structure added in CONTRIBUTING.md [MBU-8](https://memebattle.atlassian.net/browse/MBU-8)
+>>>>>>> 597721b (chore(MBU-8): Added to a CHANGELOG)
 
 ### Fixed
 
