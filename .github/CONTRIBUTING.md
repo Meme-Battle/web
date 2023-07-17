@@ -6,42 +6,38 @@ Follow the [Meme Battle styleguide](https://github.com/Meme-Battle/styleguide/bl
 
 ```bash
       NEXT_STRUCTURE
+      ├── README.md - You are here!        
       ├── src/
       │   ├── app/
-      │   │   └── page-exemple/ #Utilizar letras minusculas nos nomes das paginas
-                     └── page.tsx #Nome do arquivo minusculas  ex: page.tsx
-      │   │   │      └── #Nome do estilo deve seguir o padrão styles.module.scss
+      │   │   └── page-exemple/ # Use lowercase letters in page names
+      │   │   │      └── page.tsx # Lower case file name  ex: page.tsx
+      │   │   │      └── # Style name must follow pattern styles.module.scss
       │   │   └── page-exemple-two/ 
       │   │          └── page.tsx
       │   │          └── styles.module.scss
       │   ├── assets/
       │   │   └── images/
-      │   ├── styles/  #Estilos globais
-      │   │   └── Global.scss #Utilizar sempre letras minuscula no estilos
+      │   ├── styles/  # global styles
+      │   │   └── Global.scss # Always use lowercase letters in styles
       │   ├── components/
-      │   │   ├── UI/ #Items de UI ex : Button, Inputs
-      │   │   │   └── Item1 #Primeira letra maiuscula  ex : Button
+      │   │   ├── UI/ # UI Items ex : Button, Inputs
+      │   │   │   └── Item-exemple # Capital first letter ex : Button
+      │   │   │   │     └──  index.tsx
+      │   │   │   │     └──  styles.module.scss
+      │   │   │   └── Item-exemple-two 
       │   │   │         └──  index.tsx
       │   │   │         └──  styles.module.scss
-      │   │   │   └── Item2 
-      │   │   │         └──  index.tsx
-      │   │   │         └──  styles.module.scss
-      │   │   └── Component-Exemple/ #Nome dos componente maiusculo
-      │   │   │        └──index.tsx #Arquivos com primeira letra minuscula
-      │   │   │        └──styles.module.scss #Estilos com primeira letra minuscula 
+      │   │   └── Component-Exemple/ # Uppercase component name
+      │   │   │        └──index.tsx # Files with lowercase first letter
+      │   │   │        └──styles.module.scss # Styles with lowercase first letter
       │   │   └── Component-exemple-two/
       │   │           └──index.tsx
       │   │           └──styles.module.scss   
-      │   ├── utils/ #Hooks reutilizaveis 
-      │   │   └── #Iniciar nome do Hook com letra maiuscula
+      │   ├── utils/ # reusable hooks
+      │   │   └── # Start Hook name with capital letter
       │   │   └── 
-      │   └── contexts/ #Manipuladores de consumo da api, Ex: Informações dos usuarios e validação de de autenticação
-      │   │    └── AuthContext.tsx #Arquivos devem iniciar com letras maiusculas
-      │   ├── api/  #Api do projeto
+      │   └── contexts/ # Api consumer handlers Ex: User information and authentication validation
+      │   │    └── AuthContext.tsx # Files must start with uppercase letters
+      │   ├── api/  # Project api
       │   │   └── Api.ts
 ```
-
-```
-README.md - You are here!
-```
-
