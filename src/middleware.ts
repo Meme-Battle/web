@@ -1,26 +1,13 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { i18n } from "../i18n";
-import { match as matchLocale } from "@formatjs/intl-localematcher";
-import Negotiator from "negotiator";
+import { getLocale } from "../utils/getLocale";
+import pageError from "../utils/pageError";
 
-function getLocale(request: NextRequest): string | undefined {
-  const negotiatorHeaders: Record<string, string> = {};
-  request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
-
-  const locales: string[] = i18n.locales;
-
-  let languages = new Negotiator({ headers: negotiatorHeaders }).languages(
-    locales
-  );
-
-  const locale = matchLocale(languages, locales, i18n.defaultLocale);
-
-  return locale;
-}
-
-export function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
+  const url = request.nextUrl.href;
+  const error404 = await pageError(url);
 
   const pathnameIsMissingLocale = i18n.locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
@@ -36,6 +23,10 @@ export function middleware(request: NextRequest) {
       )
     );
   }
+   else if (error404) {
+    return NextResponse.redirect(`http://localhost:3000/`);
+  }
+  return NextResponse.next();
 }
 
 export const config = {

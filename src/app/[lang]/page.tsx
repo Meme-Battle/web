@@ -1,12 +1,12 @@
 import React from "react";
-import {getLocales } from '../../../Utils/GetLocales';
-interface HomeProps {
+import {getTranslation } from '../../../utils/getTranslation'
+
+interface pageProps {
   params: any
 }
-async function Home({params}: HomeProps) {
-  const lang = await getLocales(params.lang)
-
-  return <h1>{lang.hello}</h1>;
+async function Page({params}: pageProps) {
+  const lang = await getTranslation(params.lang)
+  return  <h1>{lang.hello}</h1>
 }
 
-export default Home;
+export default Page;
