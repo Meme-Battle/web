@@ -8,9 +8,6 @@ const locales: { [key: string]: () => Promise<TranslationData> } = {
 };
 
 export const getTranslation = (lang: string): Promise<TranslationData> => {
-  if (lang in locales) {
-    return Promise.resolve(locales[lang]());
-  } else {
-    return Promise.resolve(locales.en());
-  }
+  const selectedLang = lang in locales ? locales[lang] : locales.en;
+  return Promise.resolve(selectedLang());
 };

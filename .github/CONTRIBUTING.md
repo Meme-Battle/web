@@ -38,7 +38,7 @@ Follow the [Meme Battle styleguide](https://github.com/Meme-Battle/styleguide/bl
       │   │           └── index.tsx
       │   │           └── styles.module.scss   
       │   ├── utils/ # reusable hooks
-      │   │     └── pageError.ts # Files with lowercase first letter
+      │   │     └── utilExample.ts # Files with lowercase first letter
       │   ├── contexts/ # Api consumer handlers Ex: User information and authentication validation
       │   │     └── AuthContext.tsx # Files must start with uppercase letters
       │   ├── api/  # Project api
