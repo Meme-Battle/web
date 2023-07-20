@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Created Changelog.md [MBU-9](https://memebattle.atlassian.net/browse/MBU-9)
 - Folder template created [MBU-8](https://memebattle.atlassian.net/browse/MBU-8)
 - Created support for multiple languages [MBU-11](https://memebattle.atlassian.net/browse/MBU-11)
+- Default theme and style settings [MBU-12](https://memebattle.atlassian.net/browse/MBU-12)
 
 ### Fixed
 
