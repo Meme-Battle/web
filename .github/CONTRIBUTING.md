@@ -6,6 +6,7 @@ Follow the [Meme Battle styleguide](https://github.com/Meme-Battle/styleguide/bl
 
 ```bash
       NEXT_STRUCTURE
+      ├── LICENSE
       ├── README.md - You are here!   
       ├── locales/ # Languages items
       │      └── # Start file names with lowercase letters ex: en.json
