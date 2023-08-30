@@ -1,5 +1,5 @@
 import React from "react";
-import {getTranslation } from '../../../utils/getTranslation'
+import {getTranslation } from '../../utils/getTranslation'
 
 interface pageProps {
   params: any

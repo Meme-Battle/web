@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Created support for multiple languages [MBU-11](https://memebattle.atlassian.net/browse/MBU-11)
 - Default theme and style settings [MBU-12](https://memebattle.atlassian.net/browse/MBU-12)
 - Created the LICENSE [MBU-13](https://memebattle.atlassian.net/browse/MBU-13)
+- Created username choice [#14](https://github.com/Meme-Battle/web/issues/14)
 
 ### Fixed
 

@@ -1,3 +1,4 @@
 {
-  "hello": "Hello word!"
+  "hello": "Hello word!",
+  "nameInput": "Insert your name"
 }
