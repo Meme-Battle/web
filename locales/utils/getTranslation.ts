@@ -3,8 +3,8 @@ interface TranslationData {
 }
 
 const locales: { [key: string]: () => Promise<TranslationData> } = {
-  en: () => import("../../locales/en.json").then((r) => r.default),
-  pt: () => import("../../locales/pt.json").then((r) => r.default)
+  en: () => import("../en.json").then((r) => r.default),
+  pt: () => import("../pt.json").then((r) => r.default)
 };
 
 export const getTranslation = (lang: string): Promise<TranslationData> => {

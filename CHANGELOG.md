@@ -20,3 +20,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Adjusted README [MBU-2](https://memebattle.atlassian.net/browse/MBU-2)
+- Adjusted utils 
