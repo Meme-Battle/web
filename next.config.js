@@ -1,11 +1,12 @@
 /** @type {import('next').NextConfig} */
+const path = require('path');
+const withImages = require('next-images');
 
-const path = require('path')
-
-const nextConfig = {
+module.exports = withImages({
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
-}
-
-module.exports = nextConfig
+  images: {
+    domains: ['localhost'],
+  },
+});

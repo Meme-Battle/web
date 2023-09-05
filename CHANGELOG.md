@@ -16,8 +16,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Default theme and style settings [MBU-12](https://memebattle.atlassian.net/browse/MBU-12)
 - Created the LICENSE [MBU-13](https://memebattle.atlassian.net/browse/MBU-13)
 - Created username choice [#14](https://github.com/Meme-Battle/web/issues/14)
+- added avatar selection [#13](https://github.com/Meme-Battle/web/issues/13)
 
 ### Fixed
 
 - Adjusted README [MBU-2](https://memebattle.atlassian.net/browse/MBU-2)
-- Adjusted utils 
+- Adjusted utils [#14](https://github.com/Meme-Battle/web/issues/14)
