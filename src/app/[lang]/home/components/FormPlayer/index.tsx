@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { Input } from "../../../../../components/UI/Input";
 import { Form } from "../../../../../components/Form";
-import { GetAvatars } from "@/contexts/GetAvatars";
-import { Select } from '@/components/UI/Select';
+
+import { SelectAvatar } from '@/components/UI/SelectAvatar';
 
 interface FormPlayerProps {
   params: any;
@@ -15,31 +15,12 @@ export function FormPlayer({ params, id, image }: FormPlayerProps) {
     nickname: '',
     avatar: '',
   };
-  const [avatars, setAvatars] = useState<Array<{ id: number; image: string }>>([]);
+  
   const onSubmit = (data: Record<string, any>) => console.log(data);
-
-  useEffect(() => {
-    const fetchAvatars = async () => {
-      try {
-        const avatarsData = await GetAvatars(id, image);
-        setAvatars(avatarsData);
-      } catch (err) {
-        console.error('Erro ao buscar avatares de usuários:', err);
-      }
-    };
-    fetchAvatars();
-  }, []); 
 
   return (
     <Form onSubmit={onSubmit} defaultValues={defaultValues}>
-      <Select name='avatar'>
-        <option>Selecione um avatar</option>
-        {avatars.map((avatar) => (
-          <option key={avatar.id} value={avatar.image}>
-            {avatar.id} {avatar.image}
-          </option>
-        ))}
-      </Select>
+      <SelectAvatar name='avatar' id={id} image={image} />
       <Input name="nickname" placeholder={params.nameInput}  />
     </Form>
   );

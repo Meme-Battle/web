@@ -1,10 +1,5 @@
-import axios from 'axios';
+const baseUrl = "http://localhost:3000";
 
-function Api(ctx = undefined) {
-    const api = axios.create({
-        baseURL: "http://localhost:3000"
-    });
-
-    return api;
+export function Api(url: string, config: RequestInit) {
+    return fetch(`${baseUrl}/${url}`, config)
 }
-export const api = Api();
