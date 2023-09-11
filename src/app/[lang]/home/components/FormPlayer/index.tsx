@@ -1,27 +1,28 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Input } from "../../../../../components/UI/Input";
 import { Form } from "../../../../../components/Form";
-
 import { SelectAvatar } from '@/components/UI/SelectAvatar';
+import { useAvatars } from '@/components/UI/SelectAvatar/hooks/useAvatars';
 
 interface FormPlayerProps {
-  params: any;
-  id: number;
-  image: string;
+  lang: any;
 }
-export function FormPlayer({ params, id, image }: FormPlayerProps) {
+export  function FormPlayer({ lang }: FormPlayerProps) {
+  const onSubmit = (data: Record<string, any>) => console.log(data);
+  const avatars = useAvatars();
   const defaultValues  = {
     nickname: '',
     avatar: '',
   };
-  
-  const onSubmit = (data: Record<string, any>) => console.log(data);
 
   return (
     <Form onSubmit={onSubmit} defaultValues={defaultValues}>
-      <SelectAvatar name='avatar' id={id} image={image} />
-      <Input name="nickname" placeholder={params.nameInput}  />
+      <SelectAvatar name='avatar' 
+      options={avatars} 
+      getOptionLabel={(option) => `${option.id} ${option.image}`}
+      />
+      <Input name="nickname" placeholder={lang.nameInput}  />
     </Form>
   );
 }

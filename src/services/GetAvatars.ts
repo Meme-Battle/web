@@ -1,6 +1,6 @@
 import { Api } from "@/api/api";
 
-export async function GetAvatars(id: number, image: string){
+export async function GetAvatars(){
     try{
         const response = await Api('users/avatars', { method: 'GET' });
         if (!response.ok) {

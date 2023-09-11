@@ -4,13 +4,11 @@ import styles from './styles.module.scss';
 import { FormPlayer } from '@/app/[lang]/home/components/FormPlayer';
 interface HomeProps {
   params: any
-  avatarId:number
-  avatarImage: string;
 }
-async function Home({ params, avatarId, avatarImage }: HomeProps) {
+async function Home({ params}: HomeProps) {
   const lang = await getTranslation(params.lang)
   return (
-    <FormPlayer params={lang} id={avatarId} image={avatarImage}/>
+    <FormPlayer lang={lang}/>
   )
 }
 
